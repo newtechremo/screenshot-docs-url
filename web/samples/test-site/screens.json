@@ -1,0 +1,1145 @@
+{
+  "meta": {
+    "siteName": "테스트 사내 포털",
+    "startUrl": "http://localhost:4599/",
+    "generatedAt": "2026-10-22 15:08",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scope": "domain",
+    "prefix": null,
+    "scopeLabel": "도메인 localhost",
+    "maxPages": 20,
+    "maxDepth": 2,
+    "storageState": false
+  },
+  "screens": [
+    {
+      "id": "S001",
+      "url": "http://localhost:4599/",
+      "path": "/",
+      "depth": 0,
+      "status": "ok",
+      "screenshot": "screenshots/S001.png",
+      "aria": "- banner:\n  - link \"사내 포털\":\n    - /url: /\n  - navigation:\n    - link \"회사 소개\":\n      - /url: /about.html\n    - link \"제품\":\n      - /url: /products\n    - link \"문의\":\n      - /url: /contact.html\n    - link \"관리자\":\n      - /url: /admin\n- main:\n  - heading \"사내 포털 홈\" [level=1]\n  - heading \"공지\" [level=2]\n  - paragraph: 공지 내용\n  - link \"제품 A 바로가기\":\n    - /url: /products/a.html\n  - link \"깨진 링크\":\n    - /url: /missing.html\n  - link \"느린 페이지\":\n    - /url: /slow\n  - heading \"빠른 실행\" [level=2]\n  - button \"알림 열기\"\n- contentinfo:\n  - link \"외부 파트너\":\n    - /url: https://example.com/\n  - link \"메일\":\n    - /url: mailto:a@b.c",
+      "title": "테스트 사내 포털",
+      "links": [
+        {
+          "text": "사내 포털",
+          "href": "http://localhost:4599/",
+          "region": "헤더"
+        },
+        {
+          "text": "회사 소개",
+          "href": "http://localhost:4599/about.html",
+          "region": "헤더"
+        },
+        {
+          "text": "제품",
+          "href": "http://localhost:4599/products",
+          "region": "헤더"
+        },
+        {
+          "text": "문의",
+          "href": "http://localhost:4599/contact.html",
+          "region": "헤더"
+        },
+        {
+          "text": "관리자",
+          "href": "http://localhost:4599/admin",
+          "region": "헤더"
+        },
+        {
+          "text": "제품 A 바로가기",
+          "href": "http://localhost:4599/products/a.html",
+          "region": "본문"
+        },
+        {
+          "text": "깨진 링크",
+          "href": "http://localhost:4599/missing.html",
+          "region": "본문"
+        },
+        {
+          "text": "느린 페이지",
+          "href": "http://localhost:4599/slow",
+          "region": "본문"
+        },
+        {
+          "text": "외부 파트너",
+          "href": "https://example.com/",
+          "region": "푸터"
+        },
+        {
+          "text": "메일",
+          "href": "mailto:a@b.c",
+          "region": "푸터"
+        }
+      ],
+      "parentId": null,
+      "outbound": [
+        "S002",
+        "S003",
+        "S004",
+        "S005"
+      ],
+      "inbound": [
+        "S002",
+        "S003",
+        "S004",
+        "S005",
+        "S006",
+        "S007"
+      ],
+      "elements": [
+        {
+          "name": "헤더",
+          "type": "영역",
+          "function": "링크 5개, 버튼 0개를 담은 헤더"
+        },
+        {
+          "name": "내비게이션",
+          "type": "영역",
+          "function": "링크 4개, 버튼 0개를 담은 내비게이션"
+        },
+        {
+          "name": "본문 영역",
+          "type": "영역",
+          "function": "링크 3개, 버튼 1개를 담은 본문 영역"
+        },
+        {
+          "name": "푸터",
+          "type": "영역",
+          "function": "링크 2개, 버튼 0개를 담은 푸터"
+        },
+        {
+          "name": "사내 포털 홈",
+          "type": "제목(H1)",
+          "function": "화면 대표 제목"
+        },
+        {
+          "name": "공지",
+          "type": "섹션 제목(H2)",
+          "function": "본문 섹션 구분"
+        },
+        {
+          "name": "빠른 실행",
+          "type": "섹션 제목(H2)",
+          "function": "본문 섹션 구분"
+        },
+        {
+          "name": "알림 열기",
+          "type": "버튼",
+          "function": "본문의 동작 버튼. 결과는 클릭이 필요해 미확인"
+        },
+        {
+          "name": "사내 포털",
+          "type": "링크(헤더)",
+          "function": "S001 화면으로 이동"
+        },
+        {
+          "name": "회사 소개",
+          "type": "링크(헤더)",
+          "function": "S002 화면으로 이동"
+        },
+        {
+          "name": "제품",
+          "type": "링크(헤더)",
+          "function": "S003 화면으로 이동"
+        },
+        {
+          "name": "문의",
+          "type": "링크(헤더)",
+          "function": "S004 화면으로 이동"
+        },
+        {
+          "name": "관리자",
+          "type": "링크(헤더)",
+          "function": "/admin로 이동 (미수집 화면)"
+        },
+        {
+          "name": "제품 A 바로가기",
+          "type": "링크(본문)",
+          "function": "S005 화면으로 이동"
+        },
+        {
+          "name": "깨진 링크",
+          "type": "링크(본문)",
+          "function": "/missing.html로 이동 (미수집 화면)"
+        },
+        {
+          "name": "느린 페이지",
+          "type": "링크(본문)",
+          "function": "/slow로 이동 (미수집 화면)"
+        },
+        {
+          "name": "외부 파트너",
+          "type": "링크(푸터)",
+          "function": "외부 사이트 example.com로 이동 (새 창 여부 미확인)"
+        },
+        {
+          "name": "메일",
+          "type": "링크(푸터)",
+          "function": "메일 작성 창 열기 (a@b.c)"
+        }
+      ],
+      "description": "「테스트 사내 포털」 화면이다. 대표 제목은 「사내 포털 홈」이다. 본문은 「공지」, 「빠른 실행」 섹션으로 구성된다. 상단 메뉴(사내 포털, 회사 소개, 제품, 문의, 관리자)로 다른 화면에 이동한다. 수집된 화면 4개로 이동할 수 있다. 외부 링크 1개(example.com)가 있다. 버튼 1개(알림 열기)가 있다.",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "사내 포털 홈"
+        },
+        {
+          "level": "h2",
+          "text": "공지"
+        },
+        {
+          "level": "h2",
+          "text": "빠른 실행"
+        }
+      ],
+      "forms": []
+    },
+    {
+      "id": "S002",
+      "url": "http://localhost:4599/about.html",
+      "path": "/about.html",
+      "depth": 1,
+      "status": "ok",
+      "screenshot": "screenshots/S002.png",
+      "aria": "- banner:\n  - link \"사내 포털\":\n    - /url: /\n  - navigation:\n    - link \"회사 소개\":\n      - /url: /about.html\n    - link \"제품\":\n      - /url: /products\n    - link \"문의\":\n      - /url: /contact.html\n    - link \"관리자\":\n      - /url: /admin\n- main:\n  - heading \"회사 소개\" [level=1]\n  - heading \"연혁\" [level=2]\n  - paragraph: ...\n- contentinfo:\n  - link \"외부 파트너\":\n    - /url: https://example.com/\n  - link \"메일\":\n    - /url: mailto:a@b.c",
+      "title": "회사 소개",
+      "links": [
+        {
+          "text": "사내 포털",
+          "href": "http://localhost:4599/",
+          "region": "헤더"
+        },
+        {
+          "text": "회사 소개",
+          "href": "http://localhost:4599/about.html",
+          "region": "헤더"
+        },
+        {
+          "text": "제품",
+          "href": "http://localhost:4599/products",
+          "region": "헤더"
+        },
+        {
+          "text": "문의",
+          "href": "http://localhost:4599/contact.html",
+          "region": "헤더"
+        },
+        {
+          "text": "관리자",
+          "href": "http://localhost:4599/admin",
+          "region": "헤더"
+        },
+        {
+          "text": "외부 파트너",
+          "href": "https://example.com/",
+          "region": "푸터"
+        },
+        {
+          "text": "메일",
+          "href": "mailto:a@b.c",
+          "region": "푸터"
+        }
+      ],
+      "parentId": "S001",
+      "outbound": [
+        "S001",
+        "S003",
+        "S004"
+      ],
+      "inbound": [
+        "S001",
+        "S003",
+        "S004",
+        "S005",
+        "S006",
+        "S007"
+      ],
+      "elements": [
+        {
+          "name": "헤더",
+          "type": "영역",
+          "function": "링크 5개, 버튼 0개를 담은 헤더"
+        },
+        {
+          "name": "내비게이션",
+          "type": "영역",
+          "function": "링크 4개, 버튼 0개를 담은 내비게이션"
+        },
+        {
+          "name": "본문 영역",
+          "type": "영역",
+          "function": "링크 0개, 버튼 0개를 담은 본문 영역"
+        },
+        {
+          "name": "푸터",
+          "type": "영역",
+          "function": "링크 2개, 버튼 0개를 담은 푸터"
+        },
+        {
+          "name": "회사 소개",
+          "type": "제목(H1)",
+          "function": "화면 대표 제목"
+        },
+        {
+          "name": "연혁",
+          "type": "섹션 제목(H2)",
+          "function": "본문 섹션 구분"
+        },
+        {
+          "name": "사내 포털",
+          "type": "링크(헤더)",
+          "function": "S001 화면으로 이동"
+        },
+        {
+          "name": "회사 소개",
+          "type": "링크(헤더)",
+          "function": "S002 화면으로 이동"
+        },
+        {
+          "name": "제품",
+          "type": "링크(헤더)",
+          "function": "S003 화면으로 이동"
+        },
+        {
+          "name": "문의",
+          "type": "링크(헤더)",
+          "function": "S004 화면으로 이동"
+        },
+        {
+          "name": "관리자",
+          "type": "링크(헤더)",
+          "function": "/admin로 이동 (미수집 화면)"
+        },
+        {
+          "name": "외부 파트너",
+          "type": "링크(푸터)",
+          "function": "외부 사이트 example.com로 이동 (새 창 여부 미확인)"
+        },
+        {
+          "name": "메일",
+          "type": "링크(푸터)",
+          "function": "메일 작성 창 열기 (a@b.c)"
+        }
+      ],
+      "description": "「회사 소개」 화면이다. 대표 제목은 「회사 소개」이다. 본문은 「연혁」 섹션으로 구성된다. 상단 메뉴(사내 포털, 회사 소개, 제품, 문의, 관리자)로 다른 화면에 이동한다. 수집된 화면 3개로 이동할 수 있다. 외부 링크 1개(example.com)가 있다.",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "회사 소개"
+        },
+        {
+          "level": "h2",
+          "text": "연혁"
+        }
+      ],
+      "forms": []
+    },
+    {
+      "id": "S003",
+      "url": "http://localhost:4599/products",
+      "path": "/products",
+      "depth": 1,
+      "status": "ok",
+      "screenshot": "screenshots/S003.png",
+      "aria": "- banner:\n  - link \"사내 포털\":\n    - /url: /\n  - navigation:\n    - link \"회사 소개\":\n      - /url: /about.html\n    - link \"제품\":\n      - /url: /products\n    - link \"문의\":\n      - /url: /contact.html\n    - link \"관리자\":\n      - /url: /admin\n- main:\n  - heading \"제품 목록\" [level=1]\n  - link \"제품 A\":\n    - /url: /products/a.html\n  - link \"제품 B\":\n    - /url: /products/b.html\n- contentinfo:\n  - link \"외부 파트너\":\n    - /url: https://example.com/\n  - link \"메일\":\n    - /url: mailto:a@b.c",
+      "title": "제품 목록",
+      "links": [
+        {
+          "text": "사내 포털",
+          "href": "http://localhost:4599/",
+          "region": "헤더"
+        },
+        {
+          "text": "회사 소개",
+          "href": "http://localhost:4599/about.html",
+          "region": "헤더"
+        },
+        {
+          "text": "제품",
+          "href": "http://localhost:4599/products",
+          "region": "헤더"
+        },
+        {
+          "text": "문의",
+          "href": "http://localhost:4599/contact.html",
+          "region": "헤더"
+        },
+        {
+          "text": "관리자",
+          "href": "http://localhost:4599/admin",
+          "region": "헤더"
+        },
+        {
+          "text": "제품 A",
+          "href": "http://localhost:4599/products/a.html",
+          "region": "본문"
+        },
+        {
+          "text": "제품 B",
+          "href": "http://localhost:4599/products/b.html",
+          "region": "본문"
+        },
+        {
+          "text": "외부 파트너",
+          "href": "https://example.com/",
+          "region": "푸터"
+        },
+        {
+          "text": "메일",
+          "href": "mailto:a@b.c",
+          "region": "푸터"
+        }
+      ],
+      "parentId": "S001",
+      "outbound": [
+        "S001",
+        "S002",
+        "S004",
+        "S005",
+        "S006"
+      ],
+      "inbound": [
+        "S001",
+        "S002",
+        "S004",
+        "S005",
+        "S006",
+        "S007"
+      ],
+      "elements": [
+        {
+          "name": "헤더",
+          "type": "영역",
+          "function": "링크 5개, 버튼 0개를 담은 헤더"
+        },
+        {
+          "name": "내비게이션",
+          "type": "영역",
+          "function": "링크 4개, 버튼 0개를 담은 내비게이션"
+        },
+        {
+          "name": "본문 영역",
+          "type": "영역",
+          "function": "링크 2개, 버튼 0개를 담은 본문 영역"
+        },
+        {
+          "name": "푸터",
+          "type": "영역",
+          "function": "링크 2개, 버튼 0개를 담은 푸터"
+        },
+        {
+          "name": "제품 목록",
+          "type": "제목(H1)",
+          "function": "화면 대표 제목"
+        },
+        {
+          "name": "사내 포털",
+          "type": "링크(헤더)",
+          "function": "S001 화면으로 이동"
+        },
+        {
+          "name": "회사 소개",
+          "type": "링크(헤더)",
+          "function": "S002 화면으로 이동"
+        },
+        {
+          "name": "제품",
+          "type": "링크(헤더)",
+          "function": "S003 화면으로 이동"
+        },
+        {
+          "name": "문의",
+          "type": "링크(헤더)",
+          "function": "S004 화면으로 이동"
+        },
+        {
+          "name": "관리자",
+          "type": "링크(헤더)",
+          "function": "/admin로 이동 (미수집 화면)"
+        },
+        {
+          "name": "제품 A",
+          "type": "링크(본문)",
+          "function": "S005 화면으로 이동"
+        },
+        {
+          "name": "제품 B",
+          "type": "링크(본문)",
+          "function": "S006 화면으로 이동"
+        },
+        {
+          "name": "외부 파트너",
+          "type": "링크(푸터)",
+          "function": "외부 사이트 example.com로 이동 (새 창 여부 미확인)"
+        },
+        {
+          "name": "메일",
+          "type": "링크(푸터)",
+          "function": "메일 작성 창 열기 (a@b.c)"
+        }
+      ],
+      "description": "「제품 목록」 화면이다. 대표 제목은 「제품 목록」이다. 상단 메뉴(사내 포털, 회사 소개, 제품, 문의, 관리자)로 다른 화면에 이동한다. 수집된 화면 5개로 이동할 수 있다. 외부 링크 1개(example.com)가 있다.",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "제품 목록"
+        }
+      ],
+      "forms": []
+    },
+    {
+      "id": "S004",
+      "url": "http://localhost:4599/contact.html",
+      "path": "/contact.html",
+      "depth": 1,
+      "status": "ok",
+      "screenshot": "screenshots/S004.png",
+      "aria": "- banner:\n  - link \"사내 포털\":\n    - /url: /\n  - navigation:\n    - link \"회사 소개\":\n      - /url: /about.html\n    - link \"제품\":\n      - /url: /products\n    - link \"문의\":\n      - /url: /contact.html\n    - link \"관리자\":\n      - /url: /admin\n- main:\n  - heading \"문의하기\" [level=1]\n  - text: 이름\n  - textbox \"이름\"\n  - text: 이메일\n  - textbox \"이메일\"\n  - text: 분류\n  - combobox \"분류\":\n    - option \"견적\" [selected]\n    - option \"기술\"\n  - text: 내용\n  - textbox \"내용\"\n  - button \"보내기\"\n- contentinfo:\n  - link \"외부 파트너\":\n    - /url: https://example.com/\n  - link \"메일\":\n    - /url: mailto:a@b.c",
+      "title": "문의하기",
+      "links": [
+        {
+          "text": "사내 포털",
+          "href": "http://localhost:4599/",
+          "region": "헤더"
+        },
+        {
+          "text": "회사 소개",
+          "href": "http://localhost:4599/about.html",
+          "region": "헤더"
+        },
+        {
+          "text": "제품",
+          "href": "http://localhost:4599/products",
+          "region": "헤더"
+        },
+        {
+          "text": "문의",
+          "href": "http://localhost:4599/contact.html",
+          "region": "헤더"
+        },
+        {
+          "text": "관리자",
+          "href": "http://localhost:4599/admin",
+          "region": "헤더"
+        },
+        {
+          "text": "외부 파트너",
+          "href": "https://example.com/",
+          "region": "푸터"
+        },
+        {
+          "text": "메일",
+          "href": "mailto:a@b.c",
+          "region": "푸터"
+        }
+      ],
+      "parentId": "S001",
+      "outbound": [
+        "S001",
+        "S002",
+        "S003"
+      ],
+      "inbound": [
+        "S001",
+        "S002",
+        "S003",
+        "S005",
+        "S006",
+        "S007"
+      ],
+      "elements": [
+        {
+          "name": "헤더",
+          "type": "영역",
+          "function": "링크 5개, 버튼 0개를 담은 헤더"
+        },
+        {
+          "name": "내비게이션",
+          "type": "영역",
+          "function": "링크 4개, 버튼 0개를 담은 내비게이션"
+        },
+        {
+          "name": "본문 영역",
+          "type": "영역",
+          "function": "링크 0개, 버튼 1개를 담은 본문 영역"
+        },
+        {
+          "name": "푸터",
+          "type": "영역",
+          "function": "링크 2개, 버튼 0개를 담은 푸터"
+        },
+        {
+          "name": "문의하기",
+          "type": "제목(H1)",
+          "function": "화면 대표 제목"
+        },
+        {
+          "name": "폼 POST /api/contact",
+          "type": "폼",
+          "function": "입력 항목 4개: 이름(text, 필수), 이메일(email, 필수), 분류(select), 내용(textarea). 탐색 중 제출하지 않음"
+        },
+        {
+          "name": "이름",
+          "type": "입력(text)",
+          "function": "이름 입력 — 필수"
+        },
+        {
+          "name": "이메일",
+          "type": "입력(email)",
+          "function": "이메일 입력 — 필수"
+        },
+        {
+          "name": "분류",
+          "type": "입력(select)",
+          "function": "분류 입력 — 선택지: 견적 / 기술"
+        },
+        {
+          "name": "내용",
+          "type": "입력(textarea)",
+          "function": "내용 입력"
+        },
+        {
+          "name": "보내기",
+          "type": "버튼(제출)",
+          "function": "폼 제출/실행 버튼. 상태를 바꿀 수 있어 탐색 중 누르지 않음"
+        },
+        {
+          "name": "사내 포털",
+          "type": "링크(헤더)",
+          "function": "S001 화면으로 이동"
+        },
+        {
+          "name": "회사 소개",
+          "type": "링크(헤더)",
+          "function": "S002 화면으로 이동"
+        },
+        {
+          "name": "제품",
+          "type": "링크(헤더)",
+          "function": "S003 화면으로 이동"
+        },
+        {
+          "name": "문의",
+          "type": "링크(헤더)",
+          "function": "S004 화면으로 이동"
+        },
+        {
+          "name": "관리자",
+          "type": "링크(헤더)",
+          "function": "/admin로 이동 (미수집 화면)"
+        },
+        {
+          "name": "외부 파트너",
+          "type": "링크(푸터)",
+          "function": "외부 사이트 example.com로 이동 (새 창 여부 미확인)"
+        },
+        {
+          "name": "메일",
+          "type": "링크(푸터)",
+          "function": "메일 작성 창 열기 (a@b.c)"
+        }
+      ],
+      "description": "「문의하기」 화면이다. 대표 제목은 「문의하기」이다. 상단 메뉴(사내 포털, 회사 소개, 제품, 문의, 관리자)로 다른 화면에 이동한다. 수집된 화면 3개로 이동할 수 있다. 외부 링크 1개(example.com)가 있다. 입력 폼 1개(입력 항목 4개)가 있으며, 제출 동작은 확인하지 않았다. 버튼 1개(보내기)가 있다.",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "문의하기"
+        }
+      ],
+      "forms": [
+        {
+          "action": "/api/contact",
+          "method": "POST",
+          "fields": [
+            {
+              "label": "이름",
+              "type": "text",
+              "required": true
+            },
+            {
+              "label": "이메일",
+              "type": "email",
+              "required": true
+            },
+            {
+              "label": "분류",
+              "type": "select",
+              "required": false,
+              "options": [
+                "견적",
+                "기술"
+              ]
+            },
+            {
+              "label": "내용",
+              "type": "textarea",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S005",
+      "url": "http://localhost:4599/products/a.html",
+      "path": "/products/a.html",
+      "depth": 1,
+      "status": "ok",
+      "screenshot": "screenshots/S005.png",
+      "aria": "- banner:\n  - link \"사내 포털\":\n    - /url: /\n  - navigation:\n    - link \"회사 소개\":\n      - /url: /about.html\n    - link \"제품\":\n      - /url: /products\n    - link \"문의\":\n      - /url: /contact.html\n    - link \"관리자\":\n      - /url: /admin\n- main:\n  - heading \"제품 A\" [level=1]\n  - heading \"사양\" [level=2]\n  - link \"다음 제품\":\n    - /url: /products/b.html\n  - link \"세부\":\n    - /url: /products/deep/c.html\n- contentinfo:\n  - link \"외부 파트너\":\n    - /url: https://example.com/\n  - link \"메일\":\n    - /url: mailto:a@b.c",
+      "title": "제품 A",
+      "links": [
+        {
+          "text": "사내 포털",
+          "href": "http://localhost:4599/",
+          "region": "헤더"
+        },
+        {
+          "text": "회사 소개",
+          "href": "http://localhost:4599/about.html",
+          "region": "헤더"
+        },
+        {
+          "text": "제품",
+          "href": "http://localhost:4599/products",
+          "region": "헤더"
+        },
+        {
+          "text": "문의",
+          "href": "http://localhost:4599/contact.html",
+          "region": "헤더"
+        },
+        {
+          "text": "관리자",
+          "href": "http://localhost:4599/admin",
+          "region": "헤더"
+        },
+        {
+          "text": "다음 제품",
+          "href": "http://localhost:4599/products/b.html",
+          "region": "본문"
+        },
+        {
+          "text": "세부",
+          "href": "http://localhost:4599/products/deep/c.html",
+          "region": "본문"
+        },
+        {
+          "text": "외부 파트너",
+          "href": "https://example.com/",
+          "region": "푸터"
+        },
+        {
+          "text": "메일",
+          "href": "mailto:a@b.c",
+          "region": "푸터"
+        }
+      ],
+      "parentId": "S001",
+      "outbound": [
+        "S001",
+        "S002",
+        "S003",
+        "S004",
+        "S006",
+        "S007"
+      ],
+      "inbound": [
+        "S001",
+        "S003"
+      ],
+      "elements": [
+        {
+          "name": "헤더",
+          "type": "영역",
+          "function": "링크 5개, 버튼 0개를 담은 헤더"
+        },
+        {
+          "name": "내비게이션",
+          "type": "영역",
+          "function": "링크 4개, 버튼 0개를 담은 내비게이션"
+        },
+        {
+          "name": "본문 영역",
+          "type": "영역",
+          "function": "링크 2개, 버튼 0개를 담은 본문 영역"
+        },
+        {
+          "name": "푸터",
+          "type": "영역",
+          "function": "링크 2개, 버튼 0개를 담은 푸터"
+        },
+        {
+          "name": "제품 A",
+          "type": "제목(H1)",
+          "function": "화면 대표 제목"
+        },
+        {
+          "name": "사양",
+          "type": "섹션 제목(H2)",
+          "function": "본문 섹션 구분"
+        },
+        {
+          "name": "사내 포털",
+          "type": "링크(헤더)",
+          "function": "S001 화면으로 이동"
+        },
+        {
+          "name": "회사 소개",
+          "type": "링크(헤더)",
+          "function": "S002 화면으로 이동"
+        },
+        {
+          "name": "제품",
+          "type": "링크(헤더)",
+          "function": "S003 화면으로 이동"
+        },
+        {
+          "name": "문의",
+          "type": "링크(헤더)",
+          "function": "S004 화면으로 이동"
+        },
+        {
+          "name": "관리자",
+          "type": "링크(헤더)",
+          "function": "/admin로 이동 (미수집 화면)"
+        },
+        {
+          "name": "다음 제품",
+          "type": "링크(본문)",
+          "function": "S006 화면으로 이동"
+        },
+        {
+          "name": "세부",
+          "type": "링크(본문)",
+          "function": "S007 화면으로 이동"
+        },
+        {
+          "name": "외부 파트너",
+          "type": "링크(푸터)",
+          "function": "외부 사이트 example.com로 이동 (새 창 여부 미확인)"
+        },
+        {
+          "name": "메일",
+          "type": "링크(푸터)",
+          "function": "메일 작성 창 열기 (a@b.c)"
+        }
+      ],
+      "description": "「제품 A」 화면이다. 대표 제목은 「제품 A」이다. 본문은 「사양」 섹션으로 구성된다. 상단 메뉴(사내 포털, 회사 소개, 제품, 문의, 관리자)로 다른 화면에 이동한다. 수집된 화면 6개로 이동할 수 있다. 외부 링크 1개(example.com)가 있다.",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "제품 A"
+        },
+        {
+          "level": "h2",
+          "text": "사양"
+        }
+      ],
+      "forms": []
+    },
+    {
+      "id": "S006",
+      "url": "http://localhost:4599/products/b.html",
+      "path": "/products/b.html",
+      "depth": 2,
+      "status": "ok",
+      "screenshot": "screenshots/S006.png",
+      "aria": "- banner:\n  - link \"사내 포털\":\n    - /url: /\n  - navigation:\n    - link \"회사 소개\":\n      - /url: /about.html\n    - link \"제품\":\n      - /url: /products\n    - link \"문의\":\n      - /url: /contact.html\n    - link \"관리자\":\n      - /url: /admin\n- main:\n  - heading \"제품 B\" [level=1]\n  - button \"삭제\"\n- contentinfo:\n  - link \"외부 파트너\":\n    - /url: https://example.com/\n  - link \"메일\":\n    - /url: mailto:a@b.c",
+      "title": "제품 B",
+      "links": [
+        {
+          "text": "사내 포털",
+          "href": "http://localhost:4599/",
+          "region": "헤더"
+        },
+        {
+          "text": "회사 소개",
+          "href": "http://localhost:4599/about.html",
+          "region": "헤더"
+        },
+        {
+          "text": "제품",
+          "href": "http://localhost:4599/products",
+          "region": "헤더"
+        },
+        {
+          "text": "문의",
+          "href": "http://localhost:4599/contact.html",
+          "region": "헤더"
+        },
+        {
+          "text": "관리자",
+          "href": "http://localhost:4599/admin",
+          "region": "헤더"
+        },
+        {
+          "text": "외부 파트너",
+          "href": "https://example.com/",
+          "region": "푸터"
+        },
+        {
+          "text": "메일",
+          "href": "mailto:a@b.c",
+          "region": "푸터"
+        }
+      ],
+      "parentId": "S003",
+      "outbound": [
+        "S001",
+        "S002",
+        "S003",
+        "S004"
+      ],
+      "inbound": [
+        "S003",
+        "S005"
+      ],
+      "elements": [
+        {
+          "name": "헤더",
+          "type": "영역",
+          "function": "링크 5개, 버튼 0개를 담은 헤더"
+        },
+        {
+          "name": "내비게이션",
+          "type": "영역",
+          "function": "링크 4개, 버튼 0개를 담은 내비게이션"
+        },
+        {
+          "name": "본문 영역",
+          "type": "영역",
+          "function": "링크 0개, 버튼 1개를 담은 본문 영역"
+        },
+        {
+          "name": "푸터",
+          "type": "영역",
+          "function": "링크 2개, 버튼 0개를 담은 푸터"
+        },
+        {
+          "name": "제품 B",
+          "type": "제목(H1)",
+          "function": "화면 대표 제목"
+        },
+        {
+          "name": "삭제",
+          "type": "버튼",
+          "function": "본문의 동작 버튼. 결과는 클릭이 필요해 미확인"
+        },
+        {
+          "name": "사내 포털",
+          "type": "링크(헤더)",
+          "function": "S001 화면으로 이동"
+        },
+        {
+          "name": "회사 소개",
+          "type": "링크(헤더)",
+          "function": "S002 화면으로 이동"
+        },
+        {
+          "name": "제품",
+          "type": "링크(헤더)",
+          "function": "S003 화면으로 이동"
+        },
+        {
+          "name": "문의",
+          "type": "링크(헤더)",
+          "function": "S004 화면으로 이동"
+        },
+        {
+          "name": "관리자",
+          "type": "링크(헤더)",
+          "function": "/admin로 이동 (미수집 화면)"
+        },
+        {
+          "name": "외부 파트너",
+          "type": "링크(푸터)",
+          "function": "외부 사이트 example.com로 이동 (새 창 여부 미확인)"
+        },
+        {
+          "name": "메일",
+          "type": "링크(푸터)",
+          "function": "메일 작성 창 열기 (a@b.c)"
+        }
+      ],
+      "description": "「제품 B」 화면이다. 대표 제목은 「제품 B」이다. 상단 메뉴(사내 포털, 회사 소개, 제품, 문의, 관리자)로 다른 화면에 이동한다. 수집된 화면 4개로 이동할 수 있다. 외부 링크 1개(example.com)가 있다. 버튼 1개(삭제)가 있다.",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "제품 B"
+        }
+      ],
+      "forms": []
+    },
+    {
+      "id": "S007",
+      "url": "http://localhost:4599/products/deep/c.html",
+      "path": "/products/deep/c.html",
+      "depth": 2,
+      "status": "ok",
+      "screenshot": "screenshots/S007.png",
+      "aria": "- banner:\n  - link \"사내 포털\":\n    - /url: /\n  - navigation:\n    - link \"회사 소개\":\n      - /url: /about.html\n    - link \"제품\":\n      - /url: /products\n    - link \"문의\":\n      - /url: /contact.html\n    - link \"관리자\":\n      - /url: /admin\n- main:\n  - heading \"제품 C\" [level=1]\n  - link \"더 깊은 페이지\":\n    - /url: /products/deep/d.html\n- contentinfo:\n  - link \"외부 파트너\":\n    - /url: https://example.com/\n  - link \"메일\":\n    - /url: mailto:a@b.c",
+      "title": "제품 C 세부",
+      "links": [
+        {
+          "text": "사내 포털",
+          "href": "http://localhost:4599/",
+          "region": "헤더"
+        },
+        {
+          "text": "회사 소개",
+          "href": "http://localhost:4599/about.html",
+          "region": "헤더"
+        },
+        {
+          "text": "제품",
+          "href": "http://localhost:4599/products",
+          "region": "헤더"
+        },
+        {
+          "text": "문의",
+          "href": "http://localhost:4599/contact.html",
+          "region": "헤더"
+        },
+        {
+          "text": "관리자",
+          "href": "http://localhost:4599/admin",
+          "region": "헤더"
+        },
+        {
+          "text": "더 깊은 페이지",
+          "href": "http://localhost:4599/products/deep/d.html",
+          "region": "본문"
+        },
+        {
+          "text": "외부 파트너",
+          "href": "https://example.com/",
+          "region": "푸터"
+        },
+        {
+          "text": "메일",
+          "href": "mailto:a@b.c",
+          "region": "푸터"
+        }
+      ],
+      "parentId": "S005",
+      "outbound": [
+        "S001",
+        "S002",
+        "S003",
+        "S004"
+      ],
+      "inbound": [
+        "S005"
+      ],
+      "elements": [
+        {
+          "name": "헤더",
+          "type": "영역",
+          "function": "링크 5개, 버튼 0개를 담은 헤더"
+        },
+        {
+          "name": "내비게이션",
+          "type": "영역",
+          "function": "링크 4개, 버튼 0개를 담은 내비게이션"
+        },
+        {
+          "name": "본문 영역",
+          "type": "영역",
+          "function": "링크 1개, 버튼 0개를 담은 본문 영역"
+        },
+        {
+          "name": "푸터",
+          "type": "영역",
+          "function": "링크 2개, 버튼 0개를 담은 푸터"
+        },
+        {
+          "name": "제품 C",
+          "type": "제목(H1)",
+          "function": "화면 대표 제목"
+        },
+        {
+          "name": "사내 포털",
+          "type": "링크(헤더)",
+          "function": "S001 화면으로 이동"
+        },
+        {
+          "name": "회사 소개",
+          "type": "링크(헤더)",
+          "function": "S002 화면으로 이동"
+        },
+        {
+          "name": "제품",
+          "type": "링크(헤더)",
+          "function": "S003 화면으로 이동"
+        },
+        {
+          "name": "문의",
+          "type": "링크(헤더)",
+          "function": "S004 화면으로 이동"
+        },
+        {
+          "name": "관리자",
+          "type": "링크(헤더)",
+          "function": "/admin로 이동 (미수집 화면)"
+        },
+        {
+          "name": "더 깊은 페이지",
+          "type": "링크(본문)",
+          "function": "/products/deep/d.html로 이동 (미수집 화면)"
+        },
+        {
+          "name": "외부 파트너",
+          "type": "링크(푸터)",
+          "function": "외부 사이트 example.com로 이동 (새 창 여부 미확인)"
+        },
+        {
+          "name": "메일",
+          "type": "링크(푸터)",
+          "function": "메일 작성 창 열기 (a@b.c)"
+        }
+      ],
+      "description": "「제품 C 세부」 화면이다. 대표 제목은 「제품 C」이다. 상단 메뉴(사내 포털, 회사 소개, 제품, 문의, 관리자)로 다른 화면에 이동한다. 수집된 화면 4개로 이동할 수 있다. 외부 링크 1개(example.com)가 있다.",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "제품 C"
+        }
+      ],
+      "forms": []
+    }
+  ],
+  "uncollected": [
+    {
+      "url": "https://example.com/",
+      "reason": "범위 밖",
+      "detail": "S001에서 발견"
+    },
+    {
+      "url": "http://localhost:4599/admin",
+      "reason": "로그인 필요",
+      "detail": "HTTP 401"
+    },
+    {
+      "url": "http://localhost:4599/missing.html",
+      "reason": "오류",
+      "detail": "HTTP 404"
+    },
+    {
+      "url": "http://localhost:4599/slow",
+      "reason": "타임아웃",
+      "detail": "page.goto: Timeout 3000ms exceeded."
+    },
+    {
+      "url": "http://localhost:4599/products/deep/d.html",
+      "reason": "최대 깊이 초과",
+      "detail": "깊이 3 > 2"
+    }
+  ]
+}
