@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>화면 설계서 메이커</title>
+<meta name="description" content="URL 하나로 화면별 스크린샷·UI 요소·기능 설명을 담은 화면 설계서를 만들고, 사람이 검토해 내보내는 업무 도구 — 주식회사 리모">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--ink:#14161b;--sub:#5d6371;--faint:#8b909c;--line:#e2e4ea;--bg:#f4f5f7;--card:#fff;--accent:#1f5eff;--accent-soft:#e8eeff;--ok:#0f7b4f;--ok-soft:#e3f5ec;--warn:#a85b00;--warn-soft:#fff3e0;--r:10px}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 Pretendard,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:var(--accent)}
+.top{background:var(--ink);color:#fff}
+.top-in{max-width:1180px;margin:0 auto;padding:18px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-weight:700;font-size:18px;letter-spacing:-.01em}
+.brand small{font-weight:400;color:#aab0bd;margin-left:8px;font-size:13px}
+.tabs{display:flex;gap:4px;margin-left:auto}
+.tab{background:transparent;border:1px solid #3a3f4b;color:#cfd3db;border-radius:8px;padding:7px 14px;cursor:pointer}
+.tab[aria-selected=true]{background:#fff;color:var(--ink);border-color:#fff;font-weight:600}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 80px}
+.lead{margin:0 0 20px;color:var(--sub)}
+.lead b{color:var(--ink)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+@media (max-width:860px){.grid2{grid-template-columns:minmax(0,1fr)}}
+h2{font-size:18px;margin:0 0 14px}
+.field{margin-bottom:14px}
+.field label,.flabel{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+.hint{color:var(--faint);font-size:13px;margin-top:4px}
+input[type=text],input[type=url],input[type=number],select,textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px 11px;background:#fff}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+.row{display:flex;gap:12px}
+.row>*{flex:1}
+.radio{display:flex;gap:16px;flex-wrap:wrap}
+.radio label,.check,.field .check,.field .radio label{font-weight:400;display:flex;gap:6px;align-items:center;font-size:14px;cursor:pointer}
+.btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px 16px;cursor:pointer;font-weight:600}
+.btn:hover{border-color:#c5c9d3}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:#1849d6}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.err{color:#c62828;font-size:13px;margin-top:6px}
+pre.cmd{background:#11131a;color:#e7e9ee;border-radius:8px;padding:14px;white-space:pre-wrap;word-break:break-all;font:13px/1.6 ui-monospace,Consolas,monospace;margin:0 0 12px}
+.steps{margin:0;padding-left:20px;color:var(--sub);font-size:14px}
+.steps li{margin-bottom:6px}
+.note{background:var(--warn-soft);color:#6b3e00;border-radius:8px;padding:10px 12px;font-size:13.5px;margin-top:12px}
+.empty{color:var(--faint);text-align:center;padding:40px 10px}
+.loadbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+.upload{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;max-width:100%}
+.upload input{max-width:100%;min-width:0;font-size:13px}
+@media (max-width:600px){.tabs{margin-left:0;width:100%}.tab{flex:1}.upload{display:flex;width:100%}}
+code{word-break:break-all}
+.status{display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 16px;margin-bottom:16px}
+.status h3{margin:0;font-size:16px}
+.status .meta{color:var(--sub);font-size:13px}
+.prog{flex:1;min-width:160px;height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--ok);width:0;transition:width .2s}
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:860px){.layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.side{position:sticky;top:12px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:8px;max-height:calc(100vh - 24px);overflow:auto}
+@media (max-width:860px){.side{position:static;max-height:none}}
+.side button{display:flex;width:100%;gap:8px;align-items:center;text-align:left;background:none;border:0;border-radius:6px;padding:8px;cursor:pointer;font-size:14px}
+.side button:hover{background:var(--bg)}
+.side button[aria-current=true]{background:var(--accent-soft)}
+.side .dot{width:9px;height:9px;border-radius:50%;background:var(--line);flex:none}
+.side .dot.done{background:var(--ok)}
+.side .sid{font:12px ui-monospace,Consolas,monospace;color:var(--faint)}
+.side .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.screen h3{margin:0;font-size:18px}
+.shead{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:4px}
+.badge{font:12px ui-monospace,Consolas,monospace;background:var(--ink);color:#fff;border-radius:4px;padding:2px 7px}
+.url{color:var(--sub);font-size:13px;word-break:break-all;margin-bottom:12px}
+.shot{border:1px solid var(--line);border-radius:8px;max-height:460px;overflow:auto;background:var(--bg);margin-bottom:14px}
+.shot img{display:block;width:100%}
+.noshot{padding:28px;text-align:center;color:var(--warn);font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:14px}
+th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+th{background:var(--bg);font-weight:600}
+td.ty{white-space:nowrap;color:var(--sub)}
+.tblwrap{max-height:300px;overflow:auto;border-radius:6px}
+.flow{font-size:13.5px;color:var(--sub);margin-bottom:14px}
+.review{border-top:1px dashed var(--line);padding-top:14px}
+.review textarea{min-height:120px;resize:vertical}
+.review .bar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:10px}
+.done-check{background:var(--ok-soft);color:var(--ok);border-radius:8px;padding:8px 12px;font-weight:600}
+.edited{color:var(--warn);font-size:12.5px}
+.navbtns{display:flex;gap:8px}
+.miss{margin-top:16px}
+.miss td:nth-child(2){color:var(--warn);white-space:nowrap}
+.export{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.warnline{font-size:13px;color:var(--warn)}
+footer{color:var(--faint);font-size:12.5px;text-align:center;padding:24px 16px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="brand">화면 설계서 메이커<small>screenshot-docs URL 모드 · 주식회사 리모</small></div>
+    <nav class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tab-make" aria-selected="true" aria-controls="panel-make">① 수집 명령 만들기</button>
+      <button class="tab" role="tab" id="tab-review" aria-selected="false" aria-controls="panel-review">② 설계서 검토·내보내기</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- ① 수집 명령 만들기 -->
+  <section id="panel-make" role="tabpanel" aria-labelledby="tab-make">
+    <p class="lead"><b>URL 하나로 화면 설계서를 만듭니다.</b> 여기서 탐색 범위를 정하면 로컬 수집기(Playwright) 실행 명령이 만들어집니다. 수집 결과(<code>screens.json</code> + 스크린샷)는 ② 탭에서 사람이 검토하고 설계서로 내보냅니다.</p>
+    <div class="grid2">
+      <form class="card" id="makeForm" novalidate>
+        <h2>탐색 설정</h2>
+        <div class="field">
+          <label for="f-url">시작 URL</label>
+          <input type="url" id="f-url" placeholder="https://example.com/service" value="https://finger-ax-campus.vercel.app/event/jongno" required>
+          <div class="err" id="err-url" hidden></div>
+        </div>
+        <div class="field">
+          <span class="flabel">탐색 범위</span>
+          <div class="radio">
+            <label><input type="radio" name="scope" value="prefix" checked> 경로 prefix</label>
+            <label><input type="radio" name="scope" value="domain"> 도메인 전체</label>
+          </div>
+        </div>
+        <div class="field" id="prefixField">
+          <label for="f-prefix">경로 prefix</label>
+          <input type="text" id="f-prefix" value="/event/jongno">
+          <div class="hint">이 경로와 하위 경로만 수집합니다. URL을 바꾸면 자동으로 채워집니다.</div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="f-pages">최대 페이지 수</label><input type="number" id="f-pages" min="1" max="500" value="30"></div>
+          <div class="field"><label for="f-depth">최대 깊이</label><input type="number" id="f-depth" min="0" max="10" value="3"></div>
+        </div>
+        <div class="field">
+          <label for="f-vp">뷰포트</label>
+          <select id="f-vp">
+            <option value="1440x900">데스크톱 1440×900</option>
+            <option value="1920x1080">데스크톱 1920×1080</option>
+            <option value="1280x800">노트북 1280×800</option>
+            <option value="390x844">모바일 390×844</option>
+          </select>
+        </div>
+        <div class="field">
+          <span class="flabel">보조 입력 · 로그인 영역</span>
+          <label class="check"><input type="checkbox" id="f-sitemap"> sitemap.xml의 URL도 수집 (JS 라우팅 사이트 보완)</label>
+          <label class="check"><input type="checkbox" id="f-state"> 로그인 영역 포함 — 준비한 <code>storageState.json</code> 사용</label>
+          <div class="hint">수집기는 비밀번호를 입력하지 않습니다. 로그인 상태 파일은 사용자가 직접 준비합니다.</div>
+        </div>
+        <button class="btn primary" type="submit" id="makeBtn">실행 명령 만들기</button>
+      </form>
+
+      <div class="card" id="cmdCard">
+        <h2>실행 명령</h2>
+        <div id="cmdEmpty" class="empty">왼쪽에서 설정을 확인하고 「실행 명령 만들기」를 누르세요.</div>
+        <div id="cmdOut" hidden>
+          <pre class="cmd" id="cmdText"></pre>
+          <div class="export" style="margin-bottom:14px">
+            <button class="btn" type="button" id="copyBtn">명령 복사</button>
+            <span id="copyMsg" class="hint" aria-live="polite"></span>
+          </div>
+          <ol class="steps">
+            <li>이 저장소를 받아 <code>npm install</code>, <code>npx playwright install chromium</code> (최초 1회)</li>
+            <li>위 명령 실행 → <code>output/</code>에 <code>screens.json</code>, <code>screenshots/*.png</code>, <code>design-doc.html</code> 생성</li>
+            <li>② 탭에서 두 파일을 올려 기능 설명을 검토·수정하고 설계서로 내보내기</li>
+          </ol>
+          <div class="note" id="cmdNote">수집기는 <code>&lt;a href&gt;</code> 이동만 합니다. 폼 제출·결제·삭제 버튼은 누르지 않고, 실패한 페이지는 URL과 사유를 미수집 목록에 남깁니다.</div>
+        </div>
+        <div class="note">브라우저는 보안 정책(CORS)상 다른 사이트 화면을 직접 캡처할 수 없어, 수집은 로컬 수집기가 맡습니다. 이 웹은 수집 설정과 사람의 검토를 맡습니다.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② 검토·내보내기 -->
+  <section id="panel-review" role="tabpanel" aria-labelledby="tab-review" hidden>
+    <p class="lead"><b>사람이 판단할 지점은 자동 생성된 기능 설명이 실제 화면 의도와 맞는지다.</b> 화면마다 설명을 고치고 「검토 완료」를 표시한 뒤 설계서로 내보냅니다.</p>
+    <div class="loadbar">
+      <button class="btn" type="button" id="loadTest">샘플: 테스트 사내 포털 (스크린샷 포함)</button>
+      <button class="btn" type="button" id="loadJongno">샘플: AX Campus 종로 (구조)</button>
+      <span class="upload card" style="padding:8px 10px">
+        <label for="upJson" class="hint" style="margin:0">screens.json</label><input type="file" id="upJson" accept=".json,application/json">
+        <label for="upShots" class="hint" style="margin:0">스크린샷</label><input type="file" id="upShots" accept="image/png" multiple>
+      </span>
+    </div>
+    <div class="err" id="loadErr" hidden></div>
+
+    <div id="reviewEmpty" class="card empty">샘플을 불러오거나 수집 결과(screens.json, 스크린샷)를 올리세요.</div>
+
+    <div id="reviewArea" hidden>
+      <div class="status">
+        <div><h3 id="siteName"></h3><div class="meta" id="siteMeta"></div></div>
+        <div class="prog" aria-hidden="true"><i id="progBar"></i></div>
+        <strong id="progText" aria-live="polite"></strong>
+        <div class="export">
+          <button class="btn" type="button" id="previewBtn">설계서 미리보기</button>
+          <button class="btn primary" type="button" id="downloadBtn">설계서 내보내기 (HTML)</button>
+          <button class="btn" type="button" id="jsonBtn">검토본 screens.json</button>
+        </div>
+      </div>
+      <div class="warnline" id="exportWarn" hidden></div>
+      <div class="layout">
+        <nav class="side" id="sideList" aria-label="화면 목록"></nav>
+        <div>
+          <article class="card screen" id="screenView"></article>
+          <div class="card miss" id="missView"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>주식회사 리모 (REMO Inc.) · 화면 설계서 메이커 · 데모 서비스 — 외부로 데이터를 전송하지 않으며, 검토 내용은 이 브라우저에만 저장됩니다.</footer>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
