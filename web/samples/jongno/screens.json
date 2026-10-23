@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "siteName": "AX Campus 종로 2회차 (구조 샘플)",
+    "startUrl": "https://finger-ax-campus.vercel.app/event/jongno",
+    "generatedAt": "2026-10-22 15:00",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "scope": "prefix",
+    "prefix": "/event/jongno",
+    "scopeLabel": "경로 prefix https://finger-ax-campus.vercel.app/event/jongno",
+    "maxPages": 30,
+    "maxDepth": 3,
+    "storageState": false,
+    "note": "작업 환경에서 대상 사이트 접속이 막혀 웹 텍스트 조회로 구조만 정리한 샘플. 스크린샷과 aria snapshot은 로컬에서 CLI를 실행하면 채워진다."
+  },
+  "screens": [
+    {
+      "id": "S001",
+      "url": "https://finger-ax-campus.vercel.app/event/jongno",
+      "path": "/event/jongno",
+      "title": "전사교육 안내 · 실습프로젝트 발표",
+      "depth": 0,
+      "status": "ok",
+      "parentId": null,
+      "screenshot": "",
+      "elements": [
+        {
+          "name": "헤더",
+          "type": "영역",
+          "function": "로고·상단 메뉴·로그인 링크를 담은 헤더"
+        },
+        {
+          "name": "내 업무 서비스 하나.",
+          "type": "제목(H1)",
+          "function": "화면 대표 제목"
+        },
+        {
+          "name": "오늘의 시간표",
+          "type": "섹션 제목(H2)",
+          "function": "본문 섹션 구분"
+        },
+        {
+          "name": "만들고 · 올리고 · 주소로 제출",
+          "type": "섹션 제목(H2)",
+          "function": "본문 섹션 구분"
+        },
+        {
+          "name": "전체화면",
+          "type": "버튼",
+          "function": "시간표/카운트다운 전체화면 전환 (클릭 결과 미확인)"
+        },
+        {
+          "name": "AX Campus by OneFinger",
+          "type": "링크(헤더)",
+          "function": "/login로 이동 (범위 밖 — 미수집)"
+        },
+        {
+          "name": "전사교육 안내",
+          "type": "링크(내비게이션)",
+          "function": "S001 화면으로 이동"
+        },
+        {
+          "name": "실습자료",
+          "type": "링크(내비게이션)",
+          "function": "S002 화면으로 이동"
+        },
+        {
+          "name": "제출 대시보드",
+          "type": "링크(내비게이션)",
+          "function": "S003 화면으로 이동"
+        },
+        {
+          "name": "로그인",
+          "type": "링크(헤더)",
+          "function": "/login로 이동 (범위 밖 — 미수집)"
+        },
+        {
+          "name": "결과물 제출",
+          "type": "링크(본문)",
+          "function": "외부 사이트 hackerton-judge.vercel.app로 이동"
+        },
+        {
+          "name": "내 결과물 제출하기",
+          "type": "링크(본문)",
+          "function": "외부 사이트 hackerton-judge.vercel.app로 이동"
+        },
+        {
+          "name": "실습자료 살펴보기",
+          "type": "링크(본문)",
+          "function": "S002 화면으로 이동"
+        }
+      ],
+      "description": "「전사교육 안내 · 실습프로젝트 발표」 화면이다. 대표 제목은 「내 업무 서비스 하나.」이다. 교육 일시(2026.10.23 13:00–17:00)·장소, 8개 세션 시간표, 제출 마감 카운트다운(10월 23일 오후 4시 30분), 제출 규칙(GitHub·Vercel 공개, 기본 주소 제출, 설명 형식, 발표자료 첨부)을 안내한다. 「결과물 제출」 버튼 2개는 외부 심사 사이트(hackerton-judge.vercel.app)로 이동한다. 상단 메뉴(전사교육 안내, 실습자료, 제출 대시보드)로 S002·S003 화면에 이동한다.",
+      "outbound": [
+        "S002",
+        "S003"
+      ],
+      "inbound": [
+        "S002",
+        "S003"
+      ],
+      "aria": ""
+    },
+    {
+      "id": "S002",
+      "url": "https://finger-ax-campus.vercel.app/event/jongno/materials",
+      "path": "/event/jongno/materials",
+      "title": "실습자료 · 실습프로젝트 발표",
+      "depth": 1,
+      "status": "ok",
+      "parentId": "S001",
+      "screenshot": "",
+      "elements": [
+        {
+          "name": "헤더",
+          "type": "영역",
+          "function": "로고·상단 메뉴·로그인 링크를 담은 헤더"
+        },
+        {
+          "name": "실습자료",
+          "type": "제목(H1)",
+          "function": "화면 대표 제목"
+        },
+        {
+          "name": "OpenAI API 키",
+          "type": "섹션 제목(H2)",
+          "function": "본문 섹션 구분"
+        },
+        {
+          "name": "강의 · 실습 자료",
+          "type": "섹션 제목(H2)",
+          "function": "본문 섹션 구분"
+        },
+        {
+          "name": "서비스 제작 체크리스트",
+          "type": "섹션 제목(H2)",
+          "function": "본문 섹션 구분"
+        },
+        {
+          "name": "올리기 전에 확인",
+          "type": "섹션 제목(H2)",
+          "function": "본문 섹션 구분"
+        },
+        {
+          "name": "AX Campus by OneFinger",
+          "type": "링크(헤더)",
+          "function": "/login로 이동 (범위 밖 — 미수집)"
+        },
+        {
+          "name": "전사교육 안내",
+          "type": "링크(내비게이션)",
+          "function": "S001 화면으로 이동"
+        },
+        {
+          "name": "실습자료",
+          "type": "링크(내비게이션)",
+          "function": "S002 화면으로 이동"
+        },
+        {
+          "name": "제출 대시보드",
+          "type": "링크(내비게이션)",
+          "function": "S003 화면으로 이동"
+        },
+        {
+          "name": "로그인",
+          "type": "링크(헤더)",
+          "function": "/login로 이동 (범위 밖 — 미수집)"
+        },
+        {
+          "name": "GitHub · Vercel 배포 워크북",
+          "type": "링크(본문)",
+          "function": "외부 사이트 pie-workbook.vercel.app로 이동"
+        }
+      ],
+      "description": "「실습자료」 화면이다. 본문은 「OpenAI API 키」, 「강의 · 실습 자료」, 「서비스 제작 체크리스트」, 「올리기 전에 확인」 섹션으로 구성된다. 입력 폼과 버튼은 없다. 외부 링크 1개(pie-workbook.vercel.app, 배포 워크북)가 있다. 일부 내용은 클라이언트에서 불러오며(「불러오는 중입니다」 표시), 로그인 상태에 따라 내용이 달라질 수 있다(추정).",
+      "outbound": [
+        "S001",
+        "S003"
+      ],
+      "inbound": [
+        "S001",
+        "S003"
+      ],
+      "aria": ""
+    },
+    {
+      "id": "S003",
+      "url": "https://finger-ax-campus.vercel.app/event/jongno/gallery",
+      "path": "/event/jongno/gallery",
+      "title": "제출 대시보드 · 실습프로젝트 발표",
+      "depth": 1,
+      "status": "ok",
+      "parentId": "S001",
+      "screenshot": "",
+      "elements": [
+        {
+          "name": "헤더",
+          "type": "영역",
+          "function": "로고·상단 메뉴·로그인 링크를 담은 헤더"
+        },
+        {
+          "name": "제출 대시보드",
+          "type": "제목(H1)",
+          "function": "화면 대표 제목"
+        },
+        {
+          "name": "개인과 팀, 모두의 프로젝트",
+          "type": "섹션 제목(H2)",
+          "function": "본문 섹션 구분"
+        },
+        {
+          "name": "상세 보기",
+          "type": "버튼",
+          "function": "제출 작품 상세 열기 (클릭 결과 미확인)"
+        },
+        {
+          "name": "AX Campus by OneFinger",
+          "type": "링크(헤더)",
+          "function": "/login로 이동 (범위 밖 — 미수집)"
+        },
+        {
+          "name": "전사교육 안내",
+          "type": "링크(내비게이션)",
+          "function": "S001 화면으로 이동"
+        },
+        {
+          "name": "실습자료",
+          "type": "링크(내비게이션)",
+          "function": "S002 화면으로 이동"
+        },
+        {
+          "name": "제출 대시보드",
+          "type": "링크(내비게이션)",
+          "function": "S003 화면으로 이동"
+        },
+        {
+          "name": "로그인",
+          "type": "링크(헤더)",
+          "function": "/login로 이동 (범위 밖 — 미수집)"
+        },
+        {
+          "name": "결과물 제출",
+          "type": "링크(본문)",
+          "function": "외부 사이트 hackerton-judge.vercel.app로 이동"
+        },
+        {
+          "name": "서비스 열기",
+          "type": "링크(본문)",
+          "function": "외부 사이트 finger2-test-action-items.vercel.app로 이동"
+        }
+      ],
+      "description": "「제출 대시보드」 화면이다. 제출된 작품 수, 마감까지 남은 시간, 작품 카드 목록(분류·번호·제목·한 줄 설명·태그)을 보여준다. 조회 시점 카드 1개(JN-01 회의 액션아이템 정리기 (TEST))가 있었다. 카드의 「서비스 열기」는 제출된 Vercel 서비스로, 「상세 보기」는 상세 정보로 연결된다. 「결과물 제출」은 외부 심사 사이트로 이동한다.",
+      "outbound": [
+        "S001",
+        "S002"
+      ],
+      "inbound": [
+        "S001",
+        "S002"
+      ],
+      "aria": ""
+    }
+  ],
+  "uncollected": [
+    {
+      "url": "https://finger-ax-campus.vercel.app/login",
+      "reason": "범위 밖",
+      "detail": "경로 prefix /event/jongno 밖 (로그인 화면)"
+    },
+    {
+      "url": "https://hackerton-judge.vercel.app/?event=finger2-2026",
+      "reason": "범위 밖",
+      "detail": "외부 도메인 hackerton-judge.vercel.app"
+    },
+    {
+      "url": "https://pie-workbook.vercel.app/pie-form/ch11",
+      "reason": "범위 밖",
+      "detail": "외부 도메인"
+    },
+    {
+      "url": "https://finger2-test-action-items.vercel.app/",
+      "reason": "범위 밖",
+      "detail": "외부 도메인 (제출 작품)"
+    }
+  ]
+}
