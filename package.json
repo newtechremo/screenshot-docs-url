@@ -1,0 +1,18 @@
+{
+  "name": "screenshot-docs-url",
+  "version": "1.0.0",
+  "description": "URL 하나로 화면별 스크린샷·UI 요소·기능 설명을 담은 화면 설계서를 만드는 도구 (주식회사 리모)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "crawl": "node cli/crawl.mjs",
+    "test": "node test/run-test.mjs",
+    "serve": "node test/serve.mjs web 5173"
+  },
+  "dependencies": {
+    "playwright": "1.56.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

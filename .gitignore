@@ -1,0 +1,5 @@
+node_modules/
+output/
+test/output/
+storageState*.json
+.vercel
